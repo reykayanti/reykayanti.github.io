@@ -1,0 +1,331 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+/*
+aa3d3d
+*/
+.container{
+    display: grid;
+    width: 100%;
+    background-color: rgba(255, 178, 150, 0);
+    height: auto;
+}
+
+/* Header */
+header{
+    display: grid;
+    margin-top: 50px;
+    background-color: rgba(255, 145, 145, 0);
+    height: 500px;
+    grid-template-areas: "foto nama"; /*untuk mengatur posisi grid dalam header yaitu foto dan nama*/
+    grid-template-columns: 1fr 1fr; /* untuk mengatur ukuran grid foto dan nama*/
+}
+.foto{
+    background-image: url(profile.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.nama{
+    background-color: rgba(148, 21, 21, 0);
+    text-align: start;
+    padding-top: 180px;
+    padding-left: 20px;
+    margin-right: 20%; /*biar ga terlalu mepet disebelah kanan*/
+}
+
+.download_cv{
+    border-radius: 40px; 
+    padding: 8px 25px;
+    border: none;
+    background-color: black;
+    color: white;
+    transition: all 0.4s; /*biar bisa pindah dalam waktu 0.4 detik*/
+    cursor: pointer; /*agar mouse nya berubah bentuk jadi tangan kalo kena button*/
+}
+.download_cv:hover{ /*efek transisi yang tadi di atas*/
+    background-color: #ed696a;
+}
+.iconlink{
+    margin-top: 10px;
+}
+.inst, .pint, .ytb{
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    padding: 15px 15px;
+    border-radius: 50px;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+}
+.inst{
+    background-image: url(inst.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+.pint{
+    background-image: url(pint.png);
+    background-size: 90%;
+}
+.ytb{
+    background-image: url(ytb.png);
+    background-size: 90%;
+}
+
+
+/* Akhir Header */
+
+
+/*Navigasi*/
+nav{
+    order: -1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: center;
+    padding: 14px 30px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 10px rgb(240, 240, 240);
+}
+.nav_links{
+    display: flex;
+    list-style: none;
+}
+.nav_links li{
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.4s ease 0s;
+}
+
+.nav_links li a:hover{
+    color:#ed696a;
+}
+
+li, a{
+    text-decoration: none;
+    color: black;
+}
+
+.cta button{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 25px;
+    margin-right: 50px;
+    background-color: #ed696a;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer; /*saat cursor diarahkan, tampilan kursornya berubah*/
+    transition: all 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.cta button:hover{
+    color: rgb(255, 255, 255);
+    background-color: #fdafaf;
+    border-radius: 20px;
+}
+/*Akhir Navigasi*/
+
+
+/*About me*/
+.aboutme{
+    display: grid;
+    grid-template-areas: 
+    "atas atas"
+    "kolom1 kolom2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 40px;
+    background-color: #fde4e4; /*Background collornya*/
+    height: 300px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+.atas{
+    grid-area: atas;
+    text-align: center;
+    margin: 0%;
+    padding:0%;
+}
+.kolom1{
+    margin-left: 25%;
+    text-indent: 50px;
+    text-align: justify;
+}
+.kolom2{
+    margin-right: 25%;
+    text-indent: 50px;
+    text-align: justify;
+}
+/*Akhir About me*/
+
+/*portfolio*/
+.portfoliodesign{
+    background-color: #ffffff; /*Background collornya*/
+    height: 600px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.cont_portfolio{ /*INI BAGIAN PEMBUNGKUS CARD*/
+    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+    "cont1 cont2 cont3"
+    ;
+    grid-template-columns: repeat 1fr 1fr 1fr;
+    text-align: center;
+    gap: 40px;
+    background-color: rgba(180, 180, 180, 0);
+}
+
+.cont1, .cont2, .cont3{  /*INI BAGIAN CARD*/
+    background-color: rgba(184, 184, 184, 0);
+    width: 300px;
+    box-shadow: 2px 4px 4px rgb(224, 224, 224);
+    border-radius: 10px;
+    border-color: black;
+    border: 2px;
+    transition: all 1s ease 0s;
+}
+.cont1:hover, .cont2:hover, .cont3:hover{
+    box-shadow: 2px 4px 5px rgb(255, 164, 164);
+}
+.foto1, .foto2, .foto3{
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(128, 140, 245, 0);
+
+}
+.foto1{
+    background-image: url(11.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.foto2{
+    background-image: url(2.jpg);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.foto3{
+    background-image: url(3.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.visit{
+    margin: 50px;
+    border-radius: 20px;
+    padding: 5px 25px;
+    border: none;
+    background-color: #ed696a;
+    color: rgb(255, 2, 2);
+    transition: all 0.4s; /*biar bisa pindah dalam waktu 0.4 detik*/
+    cursor: pointer; /*agar mouse nya berubah bentuk jadi tangan kalo kena button*/
+    transition: all 0.3s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.visit:hover{
+    color: rgb(255, 255, 255);
+    background-color: #fdafaf;
+    border-radius: 20px;
+}
+.pink{
+    color: #ed696a;
+    text-shadow: 1px 1px 2px rgb(114, 114, 114);
+}
+/*akhir portfolio*/
+
+/*Tools*/
+.tools{
+    background-color: rgba(0, 0, 0, 0);
+    height: 900px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.itemtools{ /*Pembugnkus class item*/
+    display:grid;
+    grid-template-areas: 
+    "itemgit itemgithub"
+    "itemhtml itemcss"
+    "itemill itempho"
+    ;
+    justify-content: center ;
+    justify-items: center;
+    background-color: rgba(165, 42, 42, 0);
+    margin: 50px;
+    gap: 50px;
+}
+.itemgit, .itemgithub, .itemhtml, .itemcss, .itemill, .itempho{
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+    background-color: rgba(158, 137, 20, 0);
+    transition: all 0.5s ease 0s;
+}
+.itemgit:hover, .itemgithub:hover{
+    background-size: 110%;
+}
+.itemhtml:hover, .itemcss:hover{
+    background-size: 85%;
+}
+.itemill:hover, .itempho:hover{
+    background-size: 80%;
+}
+.itemgit{
+    background-image: url(git.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.itemgithub{
+    background-image: url(github.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+.itemhtml{
+    background-image: url(html.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.itemcss{
+    background-image: url(css.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+.itemill{
+    background-image: url(ill.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+.itempho{
+    background-image: url(pho.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+}
+/*Akhir Tools*/
+
+/*Footer*/
+footer{
+    box-sizing: border-box;
+    background-color: rgb(58, 58, 58);
+    color: thistle;
+    bottom: 0%;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+/*akhir footer*/
